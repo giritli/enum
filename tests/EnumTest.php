@@ -111,4 +111,11 @@ class EnumTest extends PHPUnit_Framework_TestCase
     {
         $enum = StatusEnum::unknownValue();
     }
+
+    public function testEnumPassedToEnum()
+    {
+        $enum = new StatusEnum(new StatusEnum(StatusEnum::draft));
+
+        $this->assertSame($enum->getValue(), StatusEnum::draft);
+    }
 }

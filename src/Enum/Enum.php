@@ -59,8 +59,9 @@ abstract class Enum
 
 
     /**
-     * Instanciate a new enum value.
-     * 
+     * Instantiate a new enum value.
+     *
+     * @param mixed $value
      * @throws NoDefaultValueException
      */
     public function __construct($value = null)
@@ -78,7 +79,15 @@ abstract class Enum
         }
 
         static::generateCache();
-        $this->loadValue($value);
+
+        if ($value instanceof Enum)
+        {
+            $this->loadValue($value->getValue());
+        }
+        else
+        {
+            $this->loadValue($value);
+        }
     }
 
 
