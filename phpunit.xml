@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+        verbose="true"
+        bootstrap="vendor/autoload.php"
+        >
+    <testsuites>
+        <testsuite name="Enum test suite">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>src/Enum</directory>
+            <exclude>
+                <directory>src/Enum/Exception</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

@@ -1,0 +1,27 @@
+{
+	"name": "giritli/enum",
+	"type": "library",
+	"description": "Easy to use enum class.",
+	"authors": [
+		{
+			"name": "Ozzy Giritli",
+			"email": "ozzy@girit.li"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Giritli\\Enum\\": "src/Enum"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Giritli\\Tests\\Enum\\": "tests/src/Enum"
+		}
+	}
+}
