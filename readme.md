@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/giritli/enum.svg)](https://travis-ci.org/giritli/contract)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/giritli/enum/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/giritli/contract/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/giritli/enum/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/giritli/contract/?branch=master)
+[![Build Status](https://travis-ci.org/giritli/enum.svg)](https://travis-ci.org/giritli/enum)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/giritli/enum/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/giritli/enum/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/giritli/enum/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/giritli/enum/?branch=master)
 
 # Enum
 PHP lacks enums. This is an implementation of an enum type in PHP. It allows you to define your own enum types and use them as value objects.
