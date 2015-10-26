@@ -96,4 +96,19 @@ class EnumTest extends PHPUnit_Framework_TestCase
 		$enum = new StatusNoDefaultEnum('processing');
 		$this->assertSame((string) $enum, 'processing');
 	}
+
+    public function testEnumKey()
+    {
+        $status = new StatusEnum();
+        $this->assertSame($status->getKey(), 'draft');
+    }
+
+
+    /**
+     * @expectedException Giritli\Enum\Exception\ValueNotFoundException
+     */
+    public function testInvalidEnumValueMethod()
+    {
+        $enum = StatusEnum::unknownValue();
+    }
 }
