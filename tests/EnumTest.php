@@ -118,4 +118,12 @@ class EnumTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame($enum->getValue(), StatusEnum::draft);
     }
+    
+    public function testEnumComparison()
+    {
+    	$enum = new StatusEnum(StatusEnum::draft);
+    	
+    	$this->assertTrue($enum->is(StatusEnum::draft));
+    	$this->assertTrue($enum->is($enum));
+    }
 }
