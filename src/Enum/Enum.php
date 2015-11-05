@@ -227,6 +227,17 @@ abstract class Enum
     {
         return $this->ordinal;
     }
+    
+    
+    /**
+     * Compare current value to given value.
+     * 
+     * @returns boolean;
+     */
+    public function is($value)
+    {
+        return (string) $this->getValue() === (string) $value;
+    }
 
 
     /**
