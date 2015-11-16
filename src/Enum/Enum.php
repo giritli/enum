@@ -15,7 +15,7 @@ abstract class Enum
      * 
      * @var mixed
      */ 
-    protected $value;
+    protected $value = null;
 
 
     /**
@@ -23,7 +23,7 @@ abstract class Enum
      * 
      * @var string
      */ 
-    protected $key;
+    protected $key = null;
 
 
     /**
@@ -31,7 +31,7 @@ abstract class Enum
      * 
      * @var integer
      */
-    protected $ordinal;
+    protected $ordinal = -1;
 
 
     /**
@@ -40,6 +40,12 @@ abstract class Enum
      * @var mixed
      */
     protected $default = null;
+    
+    
+    /**
+     * Can the enum be null?
+     */
+    protected $nullable = false;
 
 
     /**
@@ -68,6 +74,13 @@ abstract class Enum
     {
         if (!$value)
         {
+            if ($this->nullable)
+            {
+                static::generateCache();
+                
+                return;
+            }
+            
             if ($this->default)
             {
                 return $this->__construct($this->default);
