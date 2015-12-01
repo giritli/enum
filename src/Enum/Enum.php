@@ -5,8 +5,9 @@ namespace Giritli\Enum;
 use Giritli\Enum\Exception\NoDefaultValueException;
 use Giritli\Enum\Exception\ValueNotFoundException;
 use ReflectionClass;
+use JsonSerializable;
 
-abstract class Enum
+abstract class Enum implements JsonSerializable
 {
 
 
@@ -261,5 +262,16 @@ abstract class Enum
     public function __toString()
     {
         return (string) $this->getValue();
+    }
+    
+    
+    /**
+     * Return string value for json representation.
+     * 
+     * @return string
+     */
+    public function jsonSerialize()
+    {
+        return $this->__toString();
     }
 }
