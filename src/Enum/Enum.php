@@ -73,7 +73,7 @@ abstract class Enum implements JsonSerializable
      */
     public function __construct($value = null)
     {
-        if (!$value)
+        if (is_null($value))
         {
             if ($this->nullable)
             {
