@@ -246,7 +246,7 @@ abstract class Enum implements JsonSerializable
     /**
      * Compare current value to given value.
      * 
-     * @returns boolean;
+     * @return bool
      */
     public function is($value)
     {
